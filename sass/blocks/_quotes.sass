@@ -1,0 +1,110 @@
+.quotes
+    display: flex
+    &__author
+        display: flex
+        align-items: center 
+        border-radius: 16px 
+        padding: 36px 24px
+        max-width: 460px
+        &:hover
+            cursor: pointer
+        &-photo
+            width: 68px
+            min-width: 68px
+            height: 68px
+            overflow: hidden
+            margin-right: 24px
+            position: relative
+            z-index: 1
+        &.active
+            background: #FFFFFF
+            box-shadow: 16px 16px 36px rgba(0, 0, 0, 0.06)
+        &-content
+            b
+                font-weight: 600
+                font-size: 18px
+            p
+                font-weight: normal
+                font-size: 14px
+                color: #878982
+                width: 100%
+                max-width: 280px
+    &__title
+        margin-bottom: 89px
+    &__content
+        display: none
+        b
+            font-size: 18px
+            margin-bottom: 30px
+            display: block
+        p
+            font-size: 18px 
+            margin-bottom: 30px
+            line-height: 1.6
+            max-width: 640px
+            a
+                color: #8AAE3E
+                &:hover
+                    text-decoration: underline 
+        &:first-child
+            display: block
+        .button__pdf
+            margin: 30px 0
+    &__bef-1
+        right: 0
+        top: 0
+
+    &__left
+        width: 50%
+    &__right
+        width: 50%
+        position: relative
+        &::before,
+        &::after
+            @include pseudo 
+            width: 35px
+            height: 53px
+            background: url(../img/quotes/icon.svg) no-repeat center/ 100%
+            left: -77px
+            top: 0 
+        &::after
+            left: -116px
+
+@media screen and ( max-width: 992px )
+    .quotes
+        flex-direction: column
+    .quotes__title
+        margin-bottom: 50px
+        position: relative
+        max-width: 325px
+        width: 100%
+        &::before
+            @include pseudo
+            width: 44px
+            height: 44px
+            background: url(../img/swipe.svg) no-repeat center 
+            right: -15px
+            bottom: 0
+    .quotes__left 
+        width: 100%
+        display: flex
+        flex-direction: row
+        overflow-x: auto
+        margin-bottom: 90px
+    .quotes__author
+        width: 300px
+        min-width: 300px
+        margin-bottom: 20px
+        padding: 25px
+    .quotes__right 
+        width: 100%
+    .quotes__author.active
+        .quotes__author-content b
+            color: #8AAE3E
+        
+    .quotes__right
+    .quotes__right::after, .quotes__right::before
+        left: 0
+        top: -80px
+    .quotes__right::after
+        left: 46px

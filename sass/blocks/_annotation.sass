@@ -1,0 +1,66 @@
+.annotation
+    display: flex
+    align-items: center
+    &__item
+        width: 50%
+        position: relative
+        &-text
+            font-weight: 300
+            max-width: 564px
+        &-bef
+            font-size: 367px
+            font-family: $font_2
+            position: absolute
+            left: -120px
+            top: 50%
+            transform: translateY(-50%)
+            z-index: -1
+            opacity: 0.09
+    &__title
+        margin-bottom: 56px
+    &__descript
+        max-width: 565px 
+        margin-bottom: 50px
+    &__bef-1
+        left: 0
+        top: 0
+
+@media screen and ( max-width: 1200px )
+    .annotation__item
+        width: 45%
+    .annotation
+        justify-content: space-between
+
+@media screen and ( max-width: 980px )
+    .annotation
+        flex-direction: column
+        justify-content: flex-start
+
+    .annotation__item
+        width: 100%
+        position: relative
+
+    .annotation__descript,
+    .annotation__item-text
+        max-width: 100%
+        position: relative
+
+    .annotation__item-bef
+        left: 0
+        // top: unset
+        top: -100px
+        transform: none
+
+@media screen and ( max-width: 768px )
+    .annotation__title
+        margin-bottom: 24px
+    .annotation__descript
+        font-size: 16px
+        margin-bottom: 50px
+        line-height: 1.8
+    .annotation__item-text
+        font-size: 23px
+        line-height: 1.8
+    .annotation__item-bef
+        top: 60px
+        font-size: 280px

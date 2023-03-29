@@ -1,0 +1,140 @@
+.wrapper--first 
+	padding-bottom: 0
+
+.first 
+	display: flex 
+
+.first__img 
+	align-items: flex-end
+	display: flex
+	justify-content: center
+
+.first__content 
+	display: flex
+	flex-direction: column
+    align-items: flex-start
+
+.first__content-date 
+	font-size: 33px
+	margin-bottom: 15px
+
+.first__content-marker 
+	background: #EC4D5C
+	border-radius: 100px
+	font-size: 18px
+	padding: 10px 36px
+    color: #fff
+
+.first__title 
+	margin-bottom: 0
+
+.first__descript 
+	font-size: 33px
+	font-weight: 400
+	max-width: 510px
+	text-align: center
+	width: 100%
+
+.first__button 
+	background: #8055F9
+	border-radius: 10px
+	box-shadow: 0 4px 0 #6D43E4,0 20px 40px rgba(128,85,249,.66),inset 0 4px 10px rgba(255,242,242,.36)
+	font-size: 18px
+    color: #fff
+	font-weight: 800
+	margin: 39px 0 50px
+	padding: 22px 40px 19px
+
+.first__button:hover 
+	box-shadow: none
+    color: #fff
+
+.first__timer 
+	align-items: center
+	display: flex
+	flex-direction: column
+	margin-bottom: 38px
+
+.modal,.modal-bg,.program-modal 
+	display: none
+	position: fixed
+
+.first__timer p 
+	font-size: 20px
+	margin-bottom: 10px
+
+.first__timer-block 
+	backdrop-filter: blur(15px)
+	background: rgba(250,0,255,.1)
+	border-radius: 100px
+	padding: 13px 80px
+	/* webkit-backdrop-filter: blur(15px) */
+
+.first__list li
+	padding-left: 21px
+    font-weight: normal
+
+.first__list li::before
+	background: #000
+    width: 6px
+    height: 6px
+    top: 12px
+
+.first__marker
+    padding: 0
+    font-weight: 500
+    position: relative
+ 
+.first__marker::before
+	content: ''
+    width: 95px
+    height: 1px
+    background: #000
+    right: -104px
+    bottom: 13px
+    position: absolute
+
+
+
+@media screen and (max-width:1200px) 
+	.first__img img 
+		max-width: 100%
+	
+
+@media screen and (max-width:992px) 
+	.first 
+		flex-direction: column
+	
+	.first__img 
+		order: 2
+	
+	.first__img:first-child 
+		order: 3
+	
+	.first__content 
+		order: 1
+	
+	.first__title img 
+		max-width: 100%
+	
+	.first__content-marker 
+		text-align: center
+	
+	.first__descript 
+		font-size: 20px
+	
+	.first__button 
+		margin: 20px 0
+	
+	.first__timer-block 
+		padding: 14px 25px
+		width: 100%
+	
+
+@media screen and (max-width:768px) 
+	.first__content-date 
+		font-size: 25px
+	
+	.first__content-marker 
+		font-size: 18px
+	

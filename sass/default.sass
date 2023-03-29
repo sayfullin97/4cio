@@ -1,0 +1,203 @@
+html 
+    font-size: 20px
+    overflow-x: hidden 
+
+body 
+    font-family: $font
+    color: $black
+    background: #fff
+    margin: 0
+    overflow-x: hidden
+    width: 100%
+    min-width: 320px
+    line-height: 1.4
+    -webkit-text-size-adjust: none 
+    // запрет на копирование контента
+    -webkit-touch-callout: none    
+    -webkit-user-select: none   
+    -khtml-user-select: none    
+    -moz-user-select: none   
+    -ms-user-select: none 
+    user-select: none   
+                                  
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box 
+ul, li 
+    display: block
+    padding: 0px
+    margin: 0px 
+
+ol li 
+    display: list-item 
+
+a 
+    text-decoration: none 
+
+a:hover, a:focus 
+    outline: none
+    text-decoration: none 
+
+h1 
+    @include font(64px, 800) 
+    line-height: 1.4
+    span 
+        color: $accent
+h2 
+    @include font(48px, 700)  
+    line-height: 1.4
+
+h3 
+    @include font (36px, 700) 
+    line-height: 1.4
+
+h4
+    @include font (24px, 700)
+    line-height: 1.4 
+
+.large
+    font-size: 24px
+.bigger 
+    font-size: 18px 
+.smaller 
+    font-size: 14px 
+
+button 
+    cursor: pointer
+    outline: none 
+
+.container 
+    position: relative 
+
+.center 
+    margin: 0 auto
+    text-align: center 
+
+.cover-bg 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    overflow: hidden
+    z-index: -1
+    video 
+        width: 100%
+        height: 100%
+        object-fit: cover 
+    img 
+        width: 100%
+        height: 100%
+        object-fit: cover  
+
+.row 
+    display: flex
+    flex-wrap: wrap 
+.item-center 
+    align-items: center 
+.between 
+    justify-content: space-between 
+
+.styled-input 
+    position: relative
+    label 
+        position: absolute
+        bottom: 25px
+        left: 8px
+        @include font (16px, 500)
+        color: rgba($black, .2)
+        transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1)
+        pointer-events: none  
+
+ul 
+    li 
+        position: relative
+        padding-left: 14px
+        margin-bottom: 15px
+        &::before 
+           @include pseudo
+           width: 6px
+           height: 6px
+           background: $black
+           border-radius: 50%
+           left: 0
+           top: 5px   
+
+.button__pdf
+    display: inline-flex
+    border: 1px solid #E5E8E2
+    color: $black
+    font-weight: bold
+    font-size: 14px
+    padding: 20px 26px 20px 56px
+    border-radius: 8px
+    background: url(../img/pdf.svg) no-repeat 28px center
+    cursor: pointer
+    &:hover
+        background: #E5E8E2 url(../img/pdf.svg) no-repeat 28px center
+// input, textarea
+//     box-shadow: none
+//     outline: none
+//     border: none
+//     border-bottom: 2px solid $accent
+//     background: none
+//     width: 100%
+//     padding-bottom: 5px
+//     padding-top: 20px
+//     margin-bottom: 10px
+//     height: 55px
+//     width: 270px
+//  // & ~ span
+//  //     display: block
+//  //     width: 0
+//  //     height: 2px
+//  //     background: $accent
+//  //     position: absolute
+//  //     bottom: 0
+//  //     left: 0
+//  //     transition: all 0.4s cubic-bezier(0.2, 0, 0.03, 1)
+//  // &:focus
+//  //     outline: 0
+//  //     & ~ label
+//  //         font-size: 14px
+//  //         color: $black
+//  //         transform: translate3d(-8px,-25px,0)
+//          // transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1)
+//      // & ~ span
+//      //     width: 100%
+//      //     transition: all 0.4s cubic-bezier(0.2, 0, 0.03, 1)
+//  // &:valid
+//  //     & ~ label
+//  //         font-size: 14px
+//  //         color: $accent
+//  //         transform: translate3d(-8px,-25px,0)
+//  //         transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1)
+.left
+    text-align: left
+.color-white 
+    color: $white 
+.accent 
+    color: $accent
+    text-shadow: 0px 0px 40px rgba(133, 223, 252, 0.4)
+.bef
+    position: absolute
+.main-first
+    position: relative
+    .cover-bg
+@media screen and (max-width: 768px) 
+    h1 
+        font-size: 42px 
+    h2 
+        font-size: 36px
+      
+    h3 
+        font-size: 18px 
+    html 
+        font-size: 16px  
+
+    .wrapper
+        padding: 50px 0
+    .large
+        font-size: 18px

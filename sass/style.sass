@@ -1,0 +1,129 @@
+@import '../fonts/stylesheet.css'
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap')
+@import 'vendors/normalize.css'
+@import 'vendors/grid'
+@import 'variables'
+@import 'mixin'
+@import 'default'  
+@import 'components/btns'
+@import 'blocks/header'
+@import 'blocks/first'
+@import 'blocks/annotation'
+@import 'blocks/book'
+@import 'blocks/collegium'
+@import 'blocks/content'
+@import 'blocks/purchase' 
+@import 'blocks/partner'
+@import 'blocks/history'
+@import 'blocks/quotes'
+@import 'blocks/reviews'
+@import 'blocks/footer' 
+@import 'blocks/oferta' 
+@import 'components/modals'
+
+
+.social
+    display: flex
+    align-items: center
+    margin-left: 62px
+    &__icon
+        margin: 8px
+        &:hover
+            transform: scale(1.2)
+
+.gray
+    color: #878982
+.modal,.modal-bg
+    display: none
+    position: fixed
+
+.modal-bg
+    top: 0
+    z-index: 100
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,.85)
+
+.modal
+    z-index: 110
+    left: 50%
+    top: 50%
+    -webkit-transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%)
+    width: 100%
+    max-height: 90% !important
+    max-width: 310px
+    background: #fff
+    overflow-y: auto !important
+    &.modal-credit
+        width: 80%
+        height: 80% !important
+        max-width: unset
+        overflow-y: auto !important
+        -webkit-overflow-y: auto !important
+ 
+.program-modal 
+    display: none
+    position: fixed
+    z-index: 100
+    left: 50%
+    top: 50%
+    -webkit-transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%)
+    width: 100%
+    max-width: 680px
+    background: #fff
+    padding: 70px 70px 90px 
+    overflow-y: auto
+    height: 90%
+.modal-close 
+	position: absolute
+	right: 25px
+	top: 25px
+	width: 20px
+	height: 20px
+	background: none
+	border: none 
+
+.modal-close span 
+	width: 1px
+	height: 20px
+	background: #000
+	transform: rotate(45deg)
+	position: absolute
+	left: 7px
+	bottom: -2px 
+
+.modal-close span:nth-child(2) 
+	transform: rotate(-45deg) 
+
+.program-modal__modul 
+	font-size: 17px 
+.program-modal__title 
+    font-size: 25px
+    font-weight: bold
+    margin: 20px 0
+    display: block 
+.program-modal li 
+	padding-left: 15px
+	font-size: 19px
+	font-weight: 300
+	position: relative 
+
+.program-modal li::before 
+	content: ''
+	width: 12px
+	height: 1px
+	background: #000
+	left: 0
+	top: 12px
+	display: block
+	position: absolute 
+
+.program-modal__result b 
+	font-weight: bold 
+
+@media screen and (max-width: 720px) 
+    .program-modal 
+        padding: 20px 15px  

@@ -1,0 +1,31 @@
+.book
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-bottom: 100px
+    &__img
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 80px
+    &__bef-1
+        bottom: 0
+        left: 50%
+    &__text
+        max-width: 920px
+        width: 100%
+
+@media screen and ( max-width: 1200px )
+    .book__img
+        width: 100%
+        img
+            max-width: 100%
+
+@media screen and ( max-width: 768px )
+    .book__img
+        margin-top: 50px
+        margin-bottom: 20px
+    .book
+        text-align: left
+        margin-bottom: 0

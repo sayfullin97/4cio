@@ -1,0 +1,65 @@
+.wrapper--footer
+    padding: 70px 0 60px
+.footer
+    display: flex
+    justify-content: space-between
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 210px
+        .header__logo
+            margin-top: -30px
+        &-link
+            font-size: 20px
+            font-weight: 600
+            color: $black
+            margin: 13px 0
+            &:hover
+                color: #8AAE3E 
+        .header__item-content b
+            font-size: 20px
+        .header__item
+            margin-left: 0
+            margin-bottom: 45px
+        .header__item-content a, .header__item-content p
+            font-size: 14px 
+        a.header__item-phone
+            font-size: 20px
+    &__descript
+        font-size: 14px
+        margin: 20px 0
+    &__date
+        font-size: 14px
+        margin-top: auto
+        color: #878982
+    &__center
+        display: flex
+        align-items: flex-start 
+    &__developer
+        font-size: 14px
+        color: #878982
+        margin-top: 42px
+        a
+            color: #8AAE3E 
+            &:hover
+                text-decoration: underline
+
+@media screen and ( max-width: 1200px )
+    .footer__item
+        .header__buttons, .header__item, .header__top .social
+            display: flex
+
+@media screen and ( max-width: 800px )
+    .footer
+        flex-direction: column
+        padding-bottom: 50px
+    .footer__center
+        flex-direction: column
+        margin: 30px 0
+        .social
+            margin-left: 0
+    .footer__date
+        position: absolute
+        bottom: 0
+    

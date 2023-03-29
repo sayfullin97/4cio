@@ -1,0 +1,101 @@
+.wrapper--first
+    padding: 0
+.first
+    display: flex
+    align-items: center
+    &__img
+        width: 50%
+        img
+            max-width: 90%
+    &__content
+        width: 50%
+    &__suptitle
+        font-family: $font_2
+        font-weight: normal
+        font-size: 32px
+        color: #8AAE3E
+        padding: 10px 10px 15px
+        background: url(../img/first/border.svg) no-repeat bottom center / 140% 
+        display: inline-block
+    &__descript
+        font-weight: normal
+        font-size: 18px
+        max-width: 477px
+        line-height: 1.4
+        margin-bottom: 40px
+    &__down
+        display: flex
+    &__button
+        background: #8AAE3E
+        border-radius: 7px
+        padding: 19.5px 53px
+        font-weight: bold
+        font-size: 14px
+        border: none
+        color: #fff
+        margin-right: 12px
+        &:hover
+            box-shadow: 0 0 20px rgba(#8AAE3E, .5)
+    &__download
+        border: 1px solid #8AAE3E
+        border-radius: 7px 
+        display: flex
+        align-items: center
+        font-weight: bold
+        font-size: 14px
+        padding: 19.5px 37px 19.5px 66px
+        color: $black
+        background: url(../img/first/file.svg) no-repeat 33px center
+        &:hover
+            box-shadow: 0 0 20px rgba(#8AAE3E, .5)
+    &__title
+        margin: 20px 0
+
+@media screen and ( max-width: 1200px )
+    .wrapper--first
+        padding: 40px 0
+
+@media screen and ( max-width: 980px )
+    .first
+        flex-direction: column
+    .first__img
+        width: 100%
+        max-width: 500px
+        display: flex
+        justify-content: center
+        align-items: center
+    .first__content
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+    .wrapper--first
+        padding-top: 100px
+@media screen and ( max-width: 768px )
+    .first__down
+        flex-direction: column
+        text-align: center
+    .first__button
+        margin-right: 0
+        margin-bottom: 12px 
+    .first__down
+        width: 100%
+        max-width: 400px
+    .first__download
+        justify-content: center
+        background-position-x: 32% 
+    .first__descript
+        font-size: 16px
+        line-height: 1.8
+
+
+@media screen and ( max-width: 400px )
+    .first__download
+        background-position-x: 30% 
+@media screen and ( max-width: 375px )
+    .first__download
+        background-position-x: 28% 
+@media screen and ( max-width: 350px )
+    .first__download
+        background-position-x: 25% 

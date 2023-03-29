@@ -1,0 +1,31 @@
+@mixin push--auto
+    margin-left: auto
+    margin-right: auto
+
+@mixin pseudo
+    content: ''
+    display: block
+    position: absolute
+
+@mixin flexcenter
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin font ($size, $weight)
+    font-size: $size
+    font-weight: $weight 
+
+@mixin text-gradient 
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent 
+@mixin text-gradient-unset
+    -webkit-background-clip: unset
+    -webkit-text-fill-color: unset
+
+@mixin border-radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    border-radius: $radius 
+

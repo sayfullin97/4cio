@@ -1,0 +1,94 @@
+.what
+	display: flex	
+	&__title
+		text-align: center
+		font-size: 45px
+		font-weight: bold
+		text-transform: uppercase
+		max-width: 710px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 42px
+	&__left
+		width: 45%
+	&__img
+		width: 15%
+		display: flex
+		justify-content: center
+		align-items: center
+	&__right
+		width: 40%
+		max-width: 400px
+		margin-left: 70px
+		position: relative
+		background: #FFFFFF
+		box-shadow: 0px 40px 80px rgba(255, 201, 222, 0.37)
+		border-radius: 40px 
+		padding: 50px 30px 50px 55px
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: -20px
+			bottom: -31px
+			width: 81px
+			height: 81px
+			background: url(https://fs.getcourse.ru/fileservice/file/download/a/46751/sc/289/h/d3553c72dbcf8bef320772dc1f66f0d4.svg) no-repeat center right
+		b
+			font-size: 22px
+			font-weight: bold
+			display: block
+			margin-bottom: 10px
+		p
+			font-size: 18px
+			font-weight: normal
+			// max-width: 340px
+		&-bef-1
+			right: -50px
+			top: -100px
+	&__marker
+		display: flex
+		align-items: center
+		background: #FFE2E4
+		border-radius: 100px
+		padding: 8px 12px
+		margin-bottom: 10px
+		&-check
+			width: 40px
+			min-width: 40px
+			height: 40px
+			border-radius: 50%
+			background: $white
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-right: 10px
+		p
+			font-size: 18px
+	&__bef-1
+		left: -100px
+		top: -150px
+
+@media screen and ( max-width: 1300px )
+	.what__img
+		img
+			max-width: 130%
+
+@media screen and ( max-width: 992px )
+	.what
+		flex-direction: column
+	.what__left
+		width: 100%
+	.what__img
+		width: 100%
+	.what__right
+		width: 100%
+		margin-left: 0
+
+@media screen and ( max-width: 780px )
+	.what__bef-1
+		display: none
+	.what__title
+		font-size: 27px
+	.what__right
+		padding: 50px 15px

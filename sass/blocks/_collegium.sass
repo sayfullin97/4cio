@@ -1,0 +1,68 @@
+.collegium
+    &__slider 
+        &-item
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            outline: none
+            // margin-right: 65px
+            min-width: 200px
+            padding-right: 30px
+            span
+                font-size: 14px
+                color: #878982
+                line-height: 1.6
+                display: block
+        &-img
+            width: 160px
+            height: 160px
+            margin: 28px 0
+            border-radius: 50%
+            overflow: hidden
+            img
+                width: 100%
+                height: 100%
+        &-name
+            font-size: 18px
+            margin-bottom: 20px
+            b
+                display: block 
+    &__title
+        margin-bottom: 50px
+
+.collegium__slider .slick-next, .collegium__slider .slick-prev
+    width: 48px
+    height: 48px
+    top: -76px
+    right: 0
+    // background: #000
+    // color: #000
+    left: unset
+    &::before
+        color: #000
+        font-size: 30px
+.collegium__slider .slick-next
+
+.collegium__slider .slick-prev
+    right: 39px
+
+@media screen and ( max-width: 768px )
+    .collegium__slider-item
+        // width: 10px
+        min-width: 190px
+    .collegium__title
+        margin-bottom: 20px
+        max-width: 300px
+    .collegium__slider .slick-next, .collegium__slider .slick-prev
+        top: -40px
+@media screen and (max-width: 420px)
+    .collegium__slider-img
+        width: 130px
+        height: 130px
+    .collegium__slider-item
+        min-width: 140px
+        padding-right: 10px
+
+@media screen and ( max-width: 340px )
+    .collegium__title
+        font-size: 30px

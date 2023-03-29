@@ -1,0 +1,125 @@
+.wrapper--reviews  
+
+.reviews
+    &__title
+        text-align: center
+        margin-bottom: 170px
+    &__form
+        max-width: 1200px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        &-row
+            display: flex 
+        &-down
+            padding: 40px 25px
+            p
+                font-size: 14px
+                width: 100%
+                max-width: 507px
+                opacity: 0.4
+        &-button
+            margin-left: auto
+            width: 350px
+            &:hover
+                background: #74952d
+        &-item
+            flex-grow: 1
+            margin: 0 25px  
+            display: flex
+            flex-direction: column-reverse
+            margin-bottom: 36px
+            p
+                font-weight: normal
+                font-size: 16px
+                color: #878982
+                margin-bottom: 6px
+            input
+                background: none
+                border: none
+                border-bottom: 1px solid #E5E8E2
+                width: 100%
+                &:focus
+                    border-color: #8AAE3E
+                    outline: none
+                    & + p
+                        color: #8AAE3E 
+                    &:hover
+                        border-color: #8AAE3E
+                        outline: none
+                        & + p
+                            color: #8AAE3E 
+                &:hover
+                    border-color: $black
+                    & + p
+                        color: $black
+            textarea
+                background: none
+                border: none
+                border-bottom: 1px solid #E5E8E2
+                width: 100%
+                resize: none
+                height: 24px
+                text-align: left
+                &:focus
+                    border-color: #8AAE3E
+                    outline: none
+                    & + p
+                        color: #8AAE3E
+                &:hover
+                    border-color: $black
+                    & + p
+                        color: $black
+
+.form__load
+    width: 350px
+    margin: 0 25px
+    &-content
+        display: flex
+        align-items: center
+        cursor: pointer
+        &-text
+            margin-bottom: 5px
+            margin-left: 16px
+            b
+                font-weight: bold
+                font-size: 12px
+            p
+                font-weight: normal
+                font-size: 12px
+                opacity: .4
+        &:hover
+            .form__load-icon
+                transform: scale(1.1)
+    &-input
+        display: none
+    &-icon
+        width: 42px
+        height: 42px
+        border: 1px solid #E5E8E2
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 100
+        font-size: 35px
+        color: $black
+        line-height: 1
+        padding-top: 6px
+        padding-left: 1px
+        transition: $anim3
+
+@media screen and ( max-width: 768px )
+    .reviews__title
+        margin-bottom: 60px
+        text-align: left
+    .reviews__form
+    .reviews__form-row
+        flex-direction: column
+    .reviews__form-down
+        flex-direction: column-reverse
+    .reviews__form-button
+        margin-left: 0
+        margin-bottom: 48px
+        max-width: 100%
+    

@@ -1,0 +1,215 @@
+.modal-bg
+    // display: block !important
+
+.modal.modal-paket
+    // display: flex 
+    position: fixed
+    top: 50% 
+    left: 50%
+    transform: translate(-50%,-50%)
+    margin: auto 
+    background: $white
+    max-width: 1166px
+.modal-paket 
+    &.active
+        display: flex !important 
+    &__left
+        width: 41%
+        background: #F3F4F1
+        padding: 42px 50px
+        height: 100%
+        &-title
+            font-size: 24px
+            margin-bottom: 25px
+            display: block
+        &-down
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            .modal-paket__title
+                margin-bottom: 20px
+    &__text
+        font-size: 14px 
+        font-weight: 400
+        margin-bottom: 40px
+    &__price
+        font-size: 24px
+        color: $accent
+        margin-bottom: 74px
+        display: block
+        font-weight: 800
+    &__right
+        width: 59%
+        padding: 50px 60px
+        .modal-paket__title
+            display: block
+            margin-bottom: 33px
+    &__item
+        background: #FFFFFF
+        box-shadow: 16px 16px 36px rgba(0, 0, 0, 0.06)
+        border-radius: 16px
+        width: 100%
+        margin-bottom: 12px
+        padding: 14px 24px
+        &-top
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 4px
+        .modal-paket__text
+            margin-bottom: 0
+    &__phone
+        color: #191B14
+        font-weight: 600
+        font-size: 18px
+        &:hover
+            color: $accent
+    &__mail
+        font-size: 16px
+        font-weight: 400
+        color: $accent
+        &:hover
+            text-decoration: underline
+    &__text
+        font-size: 14px
+        line-height: 1.6
+        b
+            color: $black
+            font-weight: normal
+    &__list
+        font-size: 14px
+        margin-bottom: 46px
+        li
+            margin-bottom: 12px
+            padding-left: 20px
+            &::before
+                width: 8px
+                height: 8px
+                background: #D9E9B8
+                border-radius: 2px
+                transform: rotate(-43deg)
+    &__close
+        width: 20px
+        height: 20px
+        position: absolute
+        right: 27px
+        top: 26px
+        background: none
+        border: none
+        span
+            width: 100%
+            height: 2px
+            background: #878982
+            display: block
+            border-radius: 2px
+            transform: rotate(45deg)
+            position: absolute
+            top: 40%
+            &:nth-child(2)
+                transform: rotate(-45deg)
+.modal.modal-form
+    // display: block
+    max-width: 470px
+    padding: 40px 50px
+    select
+        display: block
+        font-size: 16px 
+        font-family: sans-serif 
+        // font-weight: 700 
+        color: $black 
+        line-height: 1.3 
+        padding: 10px 0
+        cursor: pointer
+        width: 100% 
+        max-width: 100% 
+        box-sizing: border-box 
+        margin: 0 
+        border: none
+        border-bottom: 1px solid #E5E8E2
+        // box-shadow: . 
+        border-radius: 0
+        outline: none
+        -moz-appearance: none
+        -webkit-appearance: none
+        appearance: none
+        background-color: #fff 
+        background-image: url(../img/arrow.svg)
+        background-repeat: no-repeat, repeat
+        background-position: right .7em top 50%, 0 0
+        background-size: 12px auto, 100% 
+        &:hover
+            border-color: $black
+            &+p
+                color: $black
+    .reviews__form-item
+        margin-left: 0
+        margin-right: 0
+    .modal-form__title
+        margin-bottom: 36px
+    .form__price-title
+        font-size: 16px
+        color: #878982
+        margin-bottom: 5px
+    .form__price
+        font-weight: 800
+        font-size: 36px
+        color: #191B14
+        display: block
+        margin-bottom: 36px
+    .reviews__form-button
+        margin-bottom: 35px
+    .modal-form__ps
+        font-size: 12px
+        font-weight: 400
+        color: #000
+        position: relative
+        padding-left: 36px
+        a
+            color: #000
+            text-decoration: underline
+            &:hover
+                text-decoration: none
+        &::before
+            @include pseudo
+            width: 24px
+            height: 24px
+            background: url(../img/info.svg) no-repeat center / 100%
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+@media screen and ( max-width: 992px )
+    .modal-paket__left
+        width: 100%
+    .modal-paket__right
+        width: 100%
+    .modal.modal-paket
+        flex-direction: column
+        width: 90%
+    .modal-paket__left, .modal-paket__right
+        padding: 30px 15px 
+    .modal-paket__left-title
+        margin-bottom: 15px
+    .modal-paket__text
+        margin-bottom: 15px
+    .modal-paket__price
+        margin-bottom: 20px
+    .modal-paket__left-down .modal-paket__title
+        margin-bottom: 10px
+    .modal-paket__right .modal-paket__title
+        margin-bottom: 15px
+    .modal-paket__list
+        margin-bottom: 30px
+    .modal-paket__item
+        padding: 15px
+    .modal.modal-form
+        width: 90%
+        padding: 15px
+    .modal.modal-form .form__price
+        font-size: 32px
+    .modal.modal-form .modal-form__title
+        margin: 20px 0
+        font-size: 22px
+    .modal-paket__close
+        right: 15px
+        top: 15px

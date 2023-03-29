@@ -1,0 +1,135 @@
+.history
+    margin-top: 170px 
+    position: relative 
+    .slick-prev
+        left: 0
+    .slick-next
+        right: 0
+    &__slide
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center 
+        outline: none
+    &__text
+        font-size: 24px
+        max-width: 585px
+        margin-left: auto
+        margin-right: auto
+        line-height: 1.8
+    &__year
+        font-size: 300px
+        font-family: $font_2
+        color: $accent
+        line-height: .8  
+        text-align: center 
+        .slick-track,
+        .slick-list 
+            overflow: unset
+        .slick-slide
+            b
+                display: block
+                transform: translateY(-70%)
+                opacity: 0
+                // transition: all ease-in-out 3s
+        .slick-slide.slick-current
+            b 
+                transform: translateY(0)
+                opacity: 1
+                transition: all ease-in-out .9s 
+    &__title
+        margin-bottom: 40px
+    .slick-dots
+        top: -125px
+        left: 0
+        right: 0
+        pointer-events: none
+        width: 100%
+        max-width: 920px
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        justify-content: space-between
+        bottom: unset
+        padding-top: 4px
+        padding-right: 0
+        
+        button
+            width: 14px
+            height: 14px
+            background: #F3F4F1
+            border: 3px solid #C8CBC5 
+            border-radius: 2px
+            transform: rotate(45deg)
+            margin: 0
+        li
+            margin: 0
+            &:last-child
+                margin-right: -2px
+            &::before
+                display: none
+            &.prev-item,
+            &.slick-active
+                button
+                    background: #8AAE3E
+                    border-color: #fff  
+
+    button
+        border: 1px solid #C8CBC5
+        width: 72px
+        height: 72px
+        z-index: 22
+        padding: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        &::before
+            color: #000
+            margin-top: 3px
+            font-size: 32px
+        &:hover
+            border-color: #8AAE3E
+            &::before
+                color: #8AAE3E
+.progress 
+    display: block
+    width: 100%
+    max-width: 920px
+    height: 3px
+    border-radius: 10px
+    overflow: hidden 
+    background-color: #C8CBC5
+    background-image: linear-gradient(to right, #8AAE3E, #8AAE3E)
+    background-repeat: no-repeat
+    background-size: 0 100%
+    transition: background-size .45s ease-in-out
+    position: absolute
+    top: 55px
+    left: 50%
+    transform: translateX(-50%)
+
+@media screen and ( max-width: 1200px )
+    .progress,
+    .history .slick-dots
+        display: none !important
+    .history
+        margin-top: 0
+
+@media screen and ( max-width: 768px )
+    .history__year .slick-slide b
+        font-size: 171px
+    .history__text
+        font-size: 18px
+    .history button
+        top: unset
+        bottom: -280px
+    .history .slick-prev
+        left: 50%
+        transform: translateX(-115%)
+    .history .slick-next
+        right: 50%
+        transform: translateX(115%)
+    .history__year
+        margin-bottom: 140px

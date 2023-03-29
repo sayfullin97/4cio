@@ -1,0 +1,32 @@
+.wrapper--oferta
+    padding: 50px 0
+.ycont--oferta
+    align-items: center
+.oferta
+    &__title
+        font-weight: 600
+        font-size: 52px
+        text-align: center
+    &__content
+        text-align: center
+        width: 100%
+        max-width: 735px
+        p
+            font-size: 16px
+            font-weight: 400
+            margin-bottom: 25px
+            a
+                color: $accent
+                &:hover
+                    text-decoration: underline
+    &__button
+        background: #F3F4F1
+        color: $black
+        margin: 20px 0
+    
+@media screen and ( max-width: 980px )
+    .wrapper--oferta
+        padding-top: 100px
+@media screen and ( max-width: 768px )
+    .oferta__title
+        font-size: 30px

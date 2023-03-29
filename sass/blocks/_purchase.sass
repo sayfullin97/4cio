@@ -1,0 +1,167 @@
+.wrapper--purchase
+    padding-bottom: 50px
+.purchase
+    &__bef-1
+        left: 0
+        top: 0
+    &__title
+        text-align: center
+    &__tabs
+        display: flex
+        justify-content: center
+        background: #F3F4F1
+        border-radius: 8px
+        max-width: 417px
+        margin: 20px auto
+        padding: 4px
+        &-button
+            font-size: 16px
+            font-weight: bold
+            padding: 15px 30px
+            border: none
+            border-radius: 8px
+            background: none
+            &.active
+                background: $black
+                color: $white
+        &-down
+            font-size: 14px
+            max-width: 222px
+            text-align: right
+            margin-left: auto
+            margin-right: auto
+            transform: translateX(-30%)
+            color: #878982
+            position: relative
+            margin-bottom: 70px
+            &::after
+                @include pseudo
+                width: 33px
+                height: 29px
+                background: url(../img/purchase/arrow.svg) no-repeat center 
+                right: -50px
+                top: -10px
+    &__wrapp
+        display: flex
+        flex-wrap: wrap 
+    &__small
+        width: 32%
+        max-width: 440px
+        background: #FFFFFF
+        box-shadow: 30px 30px 120px rgba(0, 0, 0, 0.06)
+        border-radius: 12px
+        margin: 10px auto
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 40px
+        &-img
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            height: 170px
+            margin-bottom: 35px
+        &-marker
+            display: flex
+            align-items: center
+            background: #F3F4F1
+            border-radius: 4px
+            padding: 8px 
+            img
+                margin-right: 8px
+            p
+                font-size: 14px
+        &-row
+            display: flex
+            align-items: center
+            &>span
+                margin: 5px
+                color: #8AAE3E
+        &-button
+            background: $black
+            color: #fff
+            border: none
+            padding: 19.5px 26px
+            margin-left: auto
+            border-radius: 8px
+            font-weight: bold
+            font-size: 14px
+            &:hover
+                box-shadow: 0 0 20px rgba(0, 0, 0, .6)
+    &__item
+        &-title
+            font-weight: 800
+            font-size: 24px
+            display: block
+            margin-bottom: 10px
+        &-text
+            margin: 24px 0
+            font-size: 14px
+            line-height: 1.6
+            &.gray
+                color: #878982
+                margin-top: 0
+        &-down
+            display: flex
+            align-items: center
+            width: 100%
+            margin-top: auto
+            b
+                margin-right: 20px
+                font-size: 24px
+                font-weight: 800
+    &__big
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: calc( 33% - 20px )
+        padding: 40px
+        background: #FFFFFF
+        box-shadow: 30px 30px 120px rgba(0, 0, 0, 0.06)
+        border-radius: 12px
+        margin: 10px 
+        &-button
+            background: #F3F4F1
+            border-radius: 8px
+            border: none
+            padding: 19.5px 57px
+            font-weight: bold
+            font-size: 14px
+            margin-left: auto
+            transition: $anim3
+            &:hover
+                background: $black
+                color: $white
+        b
+            margin-right: 20px
+            font-weight: 800
+            font-size: 24px
+
+@media screen and ( max-width: 1200px )
+    .purchase__small
+        width: 48%
+    .purchase__big
+        width: calc( 50% - 20px )
+@media screen and ( max-width: 875px )
+    .purchase__small
+        width: 100%
+        padding: 15px
+    .purchase__big
+        width: calc( 100% - 20px )
+        padding: 15px
+    .purchase__tabs-down
+        margin-bottom: 30px
+        
+    .purchase__tabs-button
+        padding: 15px
+    .purchase__item-down
+        flex-direction: column
+        align-items: flex-start
+    .purchase__big b
+        margin-bottom: 15px
+    .purchase__item-down b
+        margin-bottom: 15px
+    .purchase__big-button
+        margin-left: 0
+    .purchase__small-button
+        margin-left: 0

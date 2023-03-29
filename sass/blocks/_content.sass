@@ -1,0 +1,91 @@
+.wrapper--content
+    background: #F8F8F8
+    padding: 150px 0
+.content
+    display: flex
+    align-items: center
+    &__item
+        width: 50%
+        padding-right: 128px
+    &__img
+        width: 50%
+        img
+            max-width: 100%
+    &__title
+        margin-bottom: 100px
+    &__list
+        li
+            font-size: 14px
+            color: #000
+            padding-left: 35px
+            position: relative
+            &::before
+                width: 8px
+                height: 8px
+                background: #D9E9B8
+                border-radius: 2px
+                transform: rotate(45deg)
+    
+.accordion
+    margin: 27px 0
+    &__info
+        display: none
+        padding: 48px
+        &.active
+            display: block
+    
+    &__header
+        display: flex
+        align-items: center
+        position: relative
+        cursor: pointer
+        &::before,
+        &::after
+            @include pseudo
+            width: 24px
+            height: 2px
+            background: $black
+            border-radius: 15px
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+        &::after
+            transform: translateY(-50%) rotate(90deg)
+            transition: $anim3
+        &-num
+            display: flex
+            align-items: center
+            justify-content: center
+            background: $black
+            color: $white
+            width: 32px
+            height: 32px
+            border-radius: 50%
+            margin-right: 16px
+            padding: 7px 13px
+            font-size: 14px
+        &-title
+            font-size: 20px
+            margin-right: 30px
+        &.active
+            &::after
+                transform: translateY(-50%) rotate(0deg)
+                background: #8AAE3E
+
+@media screen and ( max-width: 1200px )
+    .content__item
+        padding-right: 20px
+
+@media screen and ( max-width: 768px )
+    .content
+        flex-direction: column-reverse
+    .wrapper--content
+        padding: 50px 0
+    .content__item
+        width: 100%
+        padding-right: 0
+    .content__title
+        margin-bottom: 44px
+    .accordion__info
+        padding: 25px
+    
